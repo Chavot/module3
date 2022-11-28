@@ -6,10 +6,12 @@
     <title>@yield('title', 'Default title')</title>
     @vite('resources/css/app.css')
 </head>
-<body>
+<body style="background: #242F40">
+@include('partials.navbar')
 
 
                     @yield('content')
 
+@include('partials.feet')
 </body>
 </html>
