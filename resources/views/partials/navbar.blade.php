@@ -1,19 +1,23 @@
-<header>
-    <nav class="navbar navbar-expand-lg shadow-md py-2 bg-darkblue relative flex items-center w-full justify-between">
-        <div class="px-6 w-full flex flex-wrap items-center justify-between">
-            <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
-                <li class="nav-item">
-                    <a class="nav-link block pr-2 lg:px-2 py-2 text-white hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!">Home</a>
+<nav class="bg-darkblue border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <a href="/" class="flex items-center">
+            <img src="https://via.placeholder.com/200/FF5400/000000?Text=Game_World" class="h-6 mr-3 sm:h-9" alt="logo"/>
+        </a>
+        <div class="w-full md:block md:w-auto">
+            <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+                <li>
+                    <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-brown md:p-0 " aria-current="page">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link block pr-2 lg:px-2 py-2 text-white hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!">Products</a>
+                <li>
+                    <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-brown md:p-0 " aria-current="page">Products</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link block pr-2 lg:px-2 py-2 text-brown hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!">Admin</a>
+                <li>
+                    <a href="#" class="block py-2 pl-3 pr-4 text-yellow hover:text-brown md:p-0 " aria-current="page">Admin</a>
                 </li>
             </ul>
-
         </div>
+    </div>
+</nav>
 
-    </nav>
-<header>
+
+
