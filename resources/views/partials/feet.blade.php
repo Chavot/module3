@@ -1,6 +1,5 @@
-<footer class="text-center text-white">
+<footer class="text-center bg-darkblue text-white bottom-0">
     <div class="text-center p-4">
-        © 2022 Copyright:
-        <a class="text-whitehite" href="https://tailwind-elements.com/">Games World</a>
+        © 2022 Copyright Games World</a>
     </div>
 </footer>
