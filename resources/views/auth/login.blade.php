@@ -42,9 +42,9 @@
                             <div class="form-group form-check">
                                 <input
                                     type="checkbox" name="remember" id="remember"
-                                    class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm
-                                    bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition
-                                    duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                    class="form-check-input appearance-none h-4 w-4 border rounded-sm
+                                     checked:bg-yellow mt-1 align-top bg-no-repeat bg-center bg-contain
+                                     float-left mr-2 cursor-pointer"
                                     {{ old('remember') ? 'checked' : '' }}/>
 
                                 <label class="form-check-label inline-block text-gray-800" for="remember">
@@ -61,10 +61,8 @@
                         <div class="text-center lg:text-left">
                             <button
                                 type="submit"
-                                class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug
-                                uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700
-                                focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg
-                                transition duration-150 ease-in-out">
+                                class="inline-block px-7 py-3 bg-blue text-whit font-medium text-sm leading-snug
+                                uppercase rounded hover:bg-darkblue transition duration-200 ease-in-out">
                                 {{ __('Login') }}
                             </button>
                             <p class="text-sm font-semibold mt-2 pt-1 mb-0">
