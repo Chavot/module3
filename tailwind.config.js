@@ -4,12 +4,13 @@ module.exports = {
         './resources/**/*.blade.php',
         './resources/**/*.js',
         './resources/**/*.vue',
+        './src/**/*.{html,js}',
+        './node_modules/tw-elements/dist/js/**/*.js',
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
     ],
     theme: {
         colors: {
             'blue': '#3C787E',
-            'lightbrown': '#3C787E',
             'brown': '#D56F3E',
             'black': '#030301',
             'darkblue': '#242F40',
@@ -17,8 +18,13 @@ module.exports = {
             'whit': '#ECF8F2',
             'orange': '#FF3C38',
             'yellow': '#CCA43B',
+            'green': '#1A936F',
+            'purple': '#231942',
             'pink': '#A01A7D',},
+
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        require('tw-elements/dist/plugin')
+    ]
 }

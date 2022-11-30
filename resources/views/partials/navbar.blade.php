@@ -6,15 +6,16 @@
         <div class="w-full md:block md:w-auto">
             <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
                 <li>
-                    <a href="/" class="block py-2 pl-3 pr-4 text-white hover:text-brown md:p-0" aria-current="page">Home</a>
+                    <a href="/" class="block py-2 pl-3 pr-4 text-white hover:text-brown md:p-0
+                    {{request()->route()->getName() === '/' ? 'text-yellow' : ''}}" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="/titles" class="block py-2 pl-3 pr-4 text-white hover:text-brown md:p-0
+                    {{request()->route()->getName() === '/titles' ? 'text-yellow' : ''}}" aria-current="page">Tittles</a>
                 </li>
                 <li>
                     <a href="{{route('products.index')}}" class="block py-2 pl-3 pr-4 text-white hover:text-brown md:p-0
-                    {{request()->route()->getName() === 'products.index' ? 'active' : ''}}" aria-current="page">Tittles</a>
-                </li>
-                <li>
-                    <a href="{{route('products.index')}}" class="block py-2 pl-3 pr-4 text-yellow hover:text-brown md:p-0
-                     {{request()->route()->getName() === 'products.index' ? 'active' : ''}}" aria-current="page">👁 Admin</a>
+                     {{request()->route()->getName() === 'products.index' ? 'text-yellow' : ''}}" aria-current="page">👁 Admin</a>
                 </li>
                 <li class="text-white">
                     |
