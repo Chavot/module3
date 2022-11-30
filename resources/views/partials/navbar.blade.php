@@ -9,10 +9,12 @@
                     <a href="/" class="block py-2 pl-3 pr-4 text-white hover:text-brown md:p-0" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-brown md:p-0" aria-current="page">Tit-les</a>
+                    <a href="{{route('products.index')}}" class="block py-2 pl-3 pr-4 text-white hover:text-brown md:p-0
+                    {{request()->route()->getName() === 'products.index' ? 'active' : ''}}" aria-current="page">Tittles</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-yellow hover:text-brown md:p-0" aria-current="page">👁 Admin</a>
+                    <a href="{{route('products.index')}}" class="block py-2 pl-3 pr-4 text-yellow hover:text-brown md:p-0
+                     {{request()->route()->getName() === 'products.index' ? 'active' : ''}}" aria-current="page">👁 Admin</a>
                 </li>
                 <li class="text-white">
                     |

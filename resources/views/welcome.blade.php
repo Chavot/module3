@@ -25,15 +25,16 @@
                 </div>
                 </div>
             </div>
-    
+
+    <div class="bg-darkblue">
             <div class="container mx-auto text-center pt-20">
 
                     {{$products->links()}}
 
-                <div class="p-1 flex flex-wrap items-center justify-center">
-                    @foreach($products as $product)
 
-                        <div class="flex-shrink-0 m-6 relative bg-orange-500 rounded-lg shadow-lg">
+                    @foreach($products as $product)
+                    <div class="p-1 flex flex-wrap items-center justify-center">
+                        <div class="flex-shrink-0 m-6 relative bg-blue rounded-lg shadow-lg">
                             <div class="relative pt-10 px-10 flex items-center justify-center">
                                 <a href="" data-mdb-ripple="true" data-mdb-ripple-color="light">
                                     <img class="rounded-t-lg" src="{{$product->image}}" alt="game"/>
@@ -49,6 +50,7 @@
                             </div>
                         </div>
                 @endforeach
-</div>
-
+                {{$products->links()}}
+            </div>
+    </div>
 @endsection

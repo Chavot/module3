@@ -29,6 +29,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('/', [PublicController::class, 'welcome']);
     Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::resource('products', ProductController::class);
     Route::get('/view/{product}', [PublicController::class, 'show'])->name('public.show');
 
 

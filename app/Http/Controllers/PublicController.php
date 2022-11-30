@@ -12,6 +12,7 @@ class PublicController extends Controller
         $products = Product::paginate(12);
         return view('welcome', compact('products'));
     }
+
     public function show(Product $product){
         return view('show', compact('product'));
     }
