@@ -21,17 +21,17 @@ class Product extends Model
         'company',
         'platform',
     ];
+
+
+    public function image():Attribute {
+        return Attribute::set(function($value){
+            if(gettype($value) === 'object' && get_class($value) === UploadedFile::class) {
+                /**
+                 * @var UploadedFile $value
+                 */
+                return Storage::url($value->store('public'));
+            }
+            return $value;
+        });
+    }
 }
-
-/* public function image():Attribute {
-    return Attribute::set(function($value){
-        if(gettype($value) === 'object' && get_class($value) === UploadedFile::class) {
-
-
-             * @var UploadedFile $value
-            return Storage::url($value->store('public'));
-        }
-        return $value;
-    });
-}
-*/

@@ -6,8 +6,10 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class PublicController extends Controller
 {
+
     public function welcome(){
 
         $products = Product::all();

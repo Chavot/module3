@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,15 +26,13 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/
 
+Route::get('/', [PublicController::class, 'welcome']);
 
-Route::middleware(['auth', 'verified'])->group(function(){
-    Route::get('/', [PublicController::class, 'welcome']);
+Route::middleware('auth')->group(function(){
     Route::get('/titles', [PublicController::class, 'titles']);
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::resource('products', ProductController::class);
     Route::get('/view/{product}', [PublicController::class, 'show'])->name('public.show');
-
-
+    Route::resource('products', ProductController::class);
 
 });
 
