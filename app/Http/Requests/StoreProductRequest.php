@@ -32,8 +32,8 @@ class StoreProductRequest extends FormRequest
             'platform' => ['required'],
             'product_code' => ['required'],
             'price' => ['required'],
-            'image' => ['nullable', 'image'],
-
+            'image' => ['required', 'image'],
         ];
     }
 }
+/*unique:products|max:20'*/

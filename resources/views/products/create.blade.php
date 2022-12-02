@@ -13,18 +13,21 @@
                 <span class="text-orange text-xs italic" role="alert"><strong>{{ $message }}</strong></span>
                 @enderror
         <div class="flex gap-4">
-            <input name="name" class=" form-control mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-purple sm:text-sm" placeholder="Title" />
+            <input name="name" class=" form-control mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-purple sm:text-sm" placeholder="Title" value="{{ old('name') }}"/>
 
-            <input name="product_code" class=" form-control mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 sm:text-sm placeholder-purple" placeholder="Product Code" />
+            <input name="product_code" class="form-control mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 sm:text-sm placeholder-purple" placeholder="Product Code" value="{{ old('product_code') }}" />
 
         </div>
                 @error('company')
                 <span class="text-orange text-xs italic" role="alert"><strong>{{ $message }}</strong></span>
                 @enderror
+                @error('platform')
+                <span class="text-orange text-xs italic" role="alert"><strong>{{ $message }}</strong></span>
+                @enderror
 
         <div class="my-6 flex gap-4">
-            <input name="company" class="mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-purple sm:text-sm" placeholder="Distributor"/>
-            <select name="select" id="select" class="block w-1/2 rounded-md border border-slate-300 bg-white placeholder-purple sm:text-sm">
+            <input name="company" class="mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-purple sm:text-sm" placeholder="Distributor" value="{{ old('company') }}"/>
+            <select name="platform" id="select" class="block w-1/2 rounded-md border border-slate-300 bg-white placeholder-purple sm:text-sm">
                 <option  class="font-semibold">PC</option>
                 <option  class="font-semibold">PlayStation</option>
                 <option  class="font-semibold">Switch</option>
@@ -35,17 +38,18 @@
                 <span class="text-orange text-xs italic" role="alert"><strong>{{ $message }}</strong></span>
                 @enderror
             <div class="my-6 flex gap-4">
-             <input  class="form-control mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-purple sm:text-sm" placeholder="Price" name="price"/>
+             <input  class="form-control mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-purple sm:text-sm" placeholder="Price" name="price" value="{{ old('price') }}"/>
                 @error('image')
                 <span class="text-orange text-xs italic" role="alert"><strong>{{ $message }}</strong></span>
                 @enderror
-                <input class="form-control mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 sm:text-sm" name="image" type="file" id="formFile">
+                <input class="form-control mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 sm:text-sm" name="image" type="file" id="image"
+                       placeholder="Choose image"/>
             </div>
         <div class="">
             @error('description')
                 <span class="text-orange text-xs italic" role="alert"><strong>{{ $message }}</strong></span>
             @enderror
-            <textarea name="description" cols="30" rows="10" class="mb-10 h-40 w-full resize-none rounded-md border bg-white border-slate-300 p-5 font-semibold">description</textarea>
+            <textarea name="description" cols="30" rows="10" class="mb-10 h-40 w-full resize-none rounded-md border bg-white border-slate-300 p-5 font-semibold" >{{Request::old('description')}}</textarea>
 
         </div>
 

@@ -31,7 +31,7 @@ class UpdateProductRequest extends FormRequest
             'platform' => ['required'],
             'product_code' => ['required'],
             'price' => ['required'],
-            'image' => ['nullable', 'image'],
+            'image' => ['required', 'image'],
 
         ];
     }
