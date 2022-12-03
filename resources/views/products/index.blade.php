@@ -55,7 +55,7 @@
                             <button type="button" class="rounded-l inline-block px-6 py-2.5 bg-blue font-medium uppercase hover:bg-darkblue transition duration-300 ease-in-out">
                             Show</button></a>
 
-                            <a href="{{route('products.edit', ['product' => $product->id])}}" class="btn btn-warning">
+                            <a href="{{route('products.edit', ['product' => $product->id])}}">
                             <button type="button" class="rounded-l inline-block px-6 py-2.5 bg-brown font-medium uppercase hover:bg-darkblue transition duration-300 ease-in-out">
                                 edit</button></a>
 

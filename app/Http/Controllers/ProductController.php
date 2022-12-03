@@ -25,6 +25,13 @@ class ProductController extends Controller
         return view('products.index', compact('products'));
     }
 
+    public function preview(){
+
+        $previews = Product::all()->orderBy($column, 'asc');
+        return view('products.show', compact('previews'));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -58,6 +65,7 @@ class ProductController extends Controller
     {
         return view('products.show', compact('product'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

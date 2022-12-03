@@ -19,7 +19,7 @@ class ProductFactory extends Factory
         return [
 
             'name' => fake()->unique()->words(3, true),
-            'description' => fake()->text(50),
+            'description' => fake()->text(150),
             'price' => rand(10, 100),
             'product_code' => fake()->unique()->postcode(),
             'image' => 'https://picsum.photos/seed/'. fake()->uuid .'/200',

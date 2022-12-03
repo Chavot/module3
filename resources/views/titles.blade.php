@@ -15,9 +15,9 @@
                             <div class="px-4 py-3 w-72">
                                 <a href=""><span class="text-white mr-3 text-md">#{{$product->platform}}</span></a>
                                 <a href=""><span class="text-white mr-3 text-md">#{{$product->company}}</span></a>
-                                <p class="text-lg font-bold text-pink truncate block uppercase">{{$product->name}}</p>
+                                <p class="text-lg font-bold text-white truncate block uppercase">{{$product->name}}</p>
                                 <div class="flex items-center">
-                                    <p class="text-lg font-semibold text-white cursor-auto my-3">{{$product->price}}€</p>
+                                    <p class="text-lg font-semibold text-pink cursor-auto my-3">{{$product->price}}€</p>
                                     <div class="ml-auto">
                                     <span class="inline-flex text-white hover:text-pink hover:bg-purple hover:fill-pink fill-white transition duration-200 ease-in-out"><p class="pr-2 text-md">Add</p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">

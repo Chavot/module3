@@ -28,9 +28,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/', [PublicController::class, 'welcome']);
 Route::get('/titles', [PublicController::class, 'titles']);
+Route::get('/view/{product}', [PublicController::class, 'show', 'preview'])->name('public.show');
 Route::middleware('auth')->group(function(){
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::get('/view/{product}', [PublicController::class, 'show'])->name('public.show');
     Route::resource('products', ProductController::class);
 
 });

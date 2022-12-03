@@ -24,6 +24,7 @@ class UpdateProductRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
             'name' => ['required'],
             'description' => ['required'],
@@ -31,7 +32,7 @@ class UpdateProductRequest extends FormRequest
             'platform' => ['required'],
             'product_code' => ['required'],
             'price' => ['required'],
-            'image' => ['required', 'image'],
+            'image' => ['nullable', 'image'],
 
         ];
     }

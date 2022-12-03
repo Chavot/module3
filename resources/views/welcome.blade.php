@@ -11,7 +11,7 @@
             background-attachment: fixed;
         }
     </style>
-
+    <div class="bg-darkblue">
             <div class="back-HB text-center text-white pt-48 h-screen">
                 <div class="flex justify-center">
                 <div class="block rounded-lg bg-black p-24">
@@ -30,26 +30,25 @@
             </div>
 
 
-    <div class="bg-darkblue">
-{{--        <div id="carouselExampleSlidesOnly" class="carousel slide relative" data-bs-ride="carousel">
-                @foreach($products->take(3) as $product)
 
-                <div class="carousel-inner relative w-full overflow-hidden">
-                    <div class="carousel-item active relative float-left w-full">
-                        <img src="{{$product->image}}"  class="block w-full" alt="game title"/>
-                            </div>
-                        <div class="carousel-caption hidden md:block absolute text-center">
-                            <h5 class="text-xl">{{$product->name}}</h5>
-                        </div>
+
+        <h2 class="text-3xl text-center font-bold leading-snug tracking-tight text-orange lg:leading-tight lg:text-4xl mb-20 mt-40">Recent titles</h2>
+
+        <div class="ml-20 mb-40 grid grid-cols-4">
+            @foreach($products->take(4) as $product)
+                <a href="{{route('public.show', ['product'=> $product->id])}}">
+                    <div class="text-center w-96">
+                        <img src="{{ $product->image }}" alt="" class="w-full">
+                        <p class="text-whit font-bold bg-purple text-xl uppercase">{{ $product->name }}</p>
                     </div>
+                </a>
+            @endforeach
+        </div>
 
-                @endforeach
-        </div>--}}
 
 
-    </div>
-    <div class="bg-darkblue">
-        <div class="container flex flex-col items-center justify-center w-full p-6 mx-auto mt-4 text-center xl:px-0">
+
+        <div class="container flex flex-col items-center justify-center w-full p-6 mx-auto mt-4 text-center">
             <h2 class="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-orange lg:leading-tight lg:text-4xl">What our existing customers say</h2></div>
         <div class="container mx-auto mb-10 xl:px-0">
             <div class="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
@@ -84,5 +83,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection
